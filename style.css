@@ -1,0 +1,260 @@
+/*** start general then get more specific ***/
+
+/**********  G L O B A L   S T Y L E S  **********   
+** styles that are going to affect all or almost all of the elements **
+---------------------------------------------------*/
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+.clearfix:after {	/* need to apply class .clearfix to parent of floated children */
+		    visibility: hidden;
+		    display: block;
+		    font-size: 0;
+		    content: " ";
+		    clear: both;
+		    height: 0;
+		    }
+
+/** resets for all page **/
+
+html {
+	font-size: 62.5%;  /* Use rem unit; 1 rem = 10 px */
+	height: 100%;
+}
+
+body {
+	/*width: 100%;*/
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	color: white;
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: "synthetique_otregular";
+    src: url("fonts/Synthetique-webfont.eot");
+    src: url("fonts/Synthetique-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/Synthetique-webfont.woff") format("woff"),
+         url("fonts/Synthetique-webfont.ttf") format("truetype"),
+         url("fonts/Synthetique-webfont.svg#synthetique_otregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, label, nav a { font-family: "synthetique_otregular", Georgia, serif;}
+
+
+
+/**********  H E A D E R  **********
+--------------------------------------------*/
+header {
+	background: rgba(255,255,255,0.5);
+	padding: 0;
+	width: 100%;
+	height: 175px;
+	position: relative;
+}
+
+svg {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50px;
+	z-index: 1;
+}
+
+label {
+	display: inline-block;
+	font-size: 2em;
+	position: absolute;
+	top: 120px;
+	left: 125px;
+	z-index: 10;
+}
+
+h1 {
+	font-size: 4rem;
+	padding: 0;
+	padding-left: 300px;
+	margin: 0;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+}
+
+h2 {
+	font-size: 5rem;
+}
+
+
+/**********  N A V I G A T I O N  ********** 
+------------------------------------------------*/
+nav {
+	position: relative;
+
+}
+
+nav ul {
+	margin-left: 30px;
+	padding: 0px;
+	position: absolute;
+	top: 20%;
+	left: -40%;
+	width: 10%;
+	text-align: center;
+	list-style: none;
+	transition: all 0.5s;
+
+}
+
+nav a {
+	margin: 20% 0;
+	padding: 10% 0;
+	display: block;
+	width: 100%;
+	font-size: 2em;
+	box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.50);
+	border-radius: 10px;
+}
+
+.slideOut {				/*this is the actual checkbox that you don't want to see*/
+	display: none;   /*find an element with a class .slideOut & hide it*/
+}
+
+.slideOut:checked + nav ul {		
+	left: 0;
+}
+		/*find an element with a class .slideOut & when it's checked possition the nav left:0 */
+
+
+
+/**********  C O N T E N T   S E C T I O N  **********
+---------------------------------------------------*/
+div.logo {
+	width: 100%;
+}
+
+img.logo {
+	width: 30%;
+	height: 30%;
+	float: left;
+	margin: 5% 35% 10%;
+}
+
+
+
+/**********  F O O T E R   S E C T I O N  **********
+---------------------------------------------------*/
+footer {
+	background: rgba(255,255,255,0.7);
+	display: inline-block;
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	z-index: 100;
+	clear: both;
+}
+
+
+
+/**********  M A I N   S E C T I O N  **********
+---------------------------------------------------*/
+
+.main {
+	background: url("background01.jpg") 50% 20% no-repeat;
+	background-size: cover;
+}
+
+
+
+/**********  A B O U T   S E C T I O N  **********
+---------------------------------------------------*/
+
+.about {
+	background: url("background09.jpg") 50% 40% no-repeat;
+	background-size: cover;
+}
+
+.liz {
+	padding: 0 10% 15% 15%;
+}
+
+.liz p,
+.liz a {
+	font-size: 1.5rem;
+	color: white;
+}
+
+.liz a,
+.liz a:hover {
+	text-decoration: none;
+	border-bottom: 1px dotted grey;
+}
+
+.col1,
+.col2 {
+	width: 50%;
+	float: left;
+	padding: 2%;
+}
+
+
+
+
+/**********  C O N T A C T   S E C T I O N  **********
+------------------------------------------------------*/
+
+.contact {
+	background: url("background07.jpg") no-repeat;
+	background-size: cover;
+}
+
+.hello {
+	padding: 0 0% 10% 15%;
+}
+
+.video {
+	float: left;
+}
+
+form {
+	display: inline-block;
+	float: left;
+	margin-left: 2%;
+	width: 40%;
+	font-size: 2rem;
+}
+
+input,
+textarea {
+	border-radius: 3px;
+	border: none;
+	padding: 2%;
+	margin: 1%;
+	font-size: 1.5rem;
+	background: rgba(255, 255, 255, 0.66);
+}
+
+input:focus {
+	box-shadow: inset 0 2px 3px rgba(255, 255, 0 ,0.2); 
+	background: rgba(255, 255, 255, 0.90);
+}
+
+input.name,
+input.email {
+	width: 47%;
+}
+
+input.button {
+	display: inline-block;
+	background: none;
+	box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.50);
+}
+
+input.button:hover {
+}
